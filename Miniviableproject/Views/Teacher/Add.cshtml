@@ -1,0 +1,32 @@
+﻿@model Miniviableproject.Models.Teacher
+
+<h2>Add New Teacher</h2>
+@using (Html.BeginForm("AddTeacher", "Teacher", FormMethod.Post))
+{
+    <div>
+        <label for="teacherfname">First Name:</label>
+        <input type="text" name="teacherfname" required />
+    </div>
+    <div>
+        <label for="teacherlname">Last Name:</label>
+        <input type="text" name="teacherlname" required />
+    </div>
+    <div>
+        <label for="employeenumber">Employee Number:</label>
+        <input type="text" name="employeenumber" required />
+    </div>
+    <div>
+        <label for="salary">Salary:</label>
+        <input type="text" name="salary" required />
+    </div>
+    <div>
+        <label for="hiredate">Hire Date:</label>
+        <input type="date" name="hiredate" required />
+    </div>
+    
+    <div>
+        <input type="submit" value="Add Teacher" />
+    </div>
+}
+<br />
+<a href="@Url.Action("List", "Teacher")">Back to List</a>

@@ -1,0 +1,14 @@
+﻿@model Miniviableproject.Models.Teacher
+
+<h2>Teacher Details</h2>
+<div>
+    <strong>ID:</strong> @Model.teacherid <br />
+    <strong>First Name:</strong> @Model.teacherfname <br />
+    <strong>Last Name:</strong> @Model.teacherlname <br />
+    <strong>Employee Number:</strong> @Model.employeenumber <br />
+    <strong>Hire Date:</strong> @Model.hiredate <br />
+    <strong>Salary:</strong> @Model.salary <br />
+    
+</div>
+<br />
+<a href="@Url.Action("List", "Teacher")">Back to List</a>

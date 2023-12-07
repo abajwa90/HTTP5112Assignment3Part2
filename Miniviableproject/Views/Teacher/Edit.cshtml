@@ -1,0 +1,34 @@
+﻿@model Miniviableproject.Models.Teacher
+
+<h2>Edit Teacher</h2>
+@using (Html.BeginForm("Edit", "Teacher", FormMethod.Post))
+{
+    @Html.HiddenFor(model => model.teacherid)
+
+    <div>
+        <label for="teacherfname">First Name:</label>
+        @Html.TextBoxFor(model => model.teacherfname, new { required = "required" })
+    </div>
+    <div>
+        <label for="teacherlname">Last Name:</label>
+        @Html.TextBoxFor(model => model.teacherlname, new { required = "required" })
+    </div>
+    <div>
+        <label for="employeenumber">Employee Number:</label>
+        @Html.TextBoxFor(model => model.employeenumber, new { required = "required" })
+    </div>
+    <div>
+        <label for="salary">Salary:</label>
+        @Html.TextBoxFor(model => model.salary, new { required = "required" })
+    </div>
+    <div>
+        <label for="hiredate">Hire Date:</label>
+        @Html.TextBoxFor(model => model.hiredate, new { type = "date", required = "required" })
+    </div>
+
+    <div>
+        <input type="submit" value="Update Teacher" />
+    </div>
+}
+<br />
+<a href="@Url.Action("List", "Teacher")">Back to List</a>

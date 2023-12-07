@@ -1,0 +1,16 @@
+﻿@model List<Miniviableproject.Models.Teacher>
+
+@{
+                /**/ 
+
+                ViewBag.Title = "Teacher Index";
+}
+
+<h2>Teacher Index</h2>
+
+<ul>
+    @foreach (var teacher in Model)
+    {
+        <li>@teacher.teacherfname</li>
+    }
+</ul>
